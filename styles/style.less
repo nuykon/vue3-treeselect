@@ -54,9 +54,9 @@
 @treeselect-multi-value-item-font-color-control-disabled: #555;
 @treeselect-multi-value-item-bg-control-disabled: #fff;
 @treeselect-multi-value-item-border-color-control-disabled: #e5e5e5;
-@treeselect-multi-value-remove-color: @treeselect-multi-value-font-color;
-@treeselect-multi-value-remove-color-hover: @md-red-600;
-@treeselect-multi-value-remove-size: 6px;
+@treeselect-multi-value-remove-color: rgba(16, 24, 40, 0.5);
+@treeselect-multi-value-remove-color-hover: rgba(16, 24, 40);
+@treeselect-multi-value-remove-size: 18px;
 @treeselect-multi-value-divider-color: #fff;
 @treeselect-limit-tip-font-color: @md-grey-400;
 @treeselect-limit-tip-font-size: @treeselect-multi-value-font-size;
@@ -71,13 +71,13 @@
 @treeselect-control-menu-divider-color: #f2f2f2;
 
 @treeselect-arrow-size: 9px;
-@treeselect-arrow-color: #ccc;
-@treeselect-arrow-color-hover: @md-grey-700;
+@treeselect-arrow-color: rgba(16, 24, 40, 0.5);
+@treeselect-arrow-color-hover: rgba(16, 24, 40);
 @treeselect-arrow-transition-timing-function: @ease-out-expo;
 
-@treeselect-x-size: 8px;
-@treeselect-x-color: @treeselect-arrow-color;
-@treeselect-x-color-hover: @md-red-600;
+@treeselect-x-size: 24px;
+@treeselect-x-color: rgba(16, 24, 40, 0.5);
+@treeselect-x-color-hover: rgba(16, 24, 40);
 
 @treeselect-option-bg-highlight: @md-grey-100;
 @treeselect-option-selected-bg: @md-blue-50;
@@ -535,7 +535,7 @@
   .clickable();
 
   color: @treeselect-multi-value-remove-color;
-  padding-left: @treeselect-multi-value-padding-x;
+  padding: 0;
   border-left: 1px solid @treeselect-multi-value-divider-color;
   line-height: 0;
 
@@ -560,7 +560,7 @@
 }
 
 .vue3-treeselect__multi-value-label {
-  padding-right: @treeselect-multi-value-padding-x;
+  padding-right: 0;
   white-space: pre-line;
   user-select: none;
 }
