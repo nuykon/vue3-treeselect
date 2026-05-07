@@ -9,11 +9,11 @@
  * Variables
  */
 
-@treeselect-font-size: 1em;
+@treeselect-font-size: 16px;
 @treeselect-font-size-sm: 12px;
 @treeselect-padding: 5px;
-@treeselect-border-radius-lg: 5px;
-@treeselect-border-radius-sm: 2px;
+@treeselect-border-radius-lg: 8px;
+@treeselect-border-radius-sm: 3px;
 @treeselect-narrow-cell-width: 20px;
 @treeselect-wide-cell-width: 100%;
 @treeselect-icon-size: 12px;
@@ -21,7 +21,7 @@
 @treeselect-transition-duration-slow: 400ms;
 @treeselect-max-level: 8;
 
-@treeselect-control-height: 36px;
+@treeselect-control-height: 48px;
 @treeselect-control-inner-height: @treeselect-control-height - @treeselect-control-border-width * 2;
 @treeselect-control-border-width: 1px;
 @treeselect-control-border-color: #ddd;
@@ -29,11 +29,11 @@
 @treeselect-control-border-color-active: @treeselect-control-border-color-hover;
 @treeselect-control-border-color-focus: @md-light-blue-600;
 @treeselect-control-border-radius: @treeselect-border-radius-lg;
-@treeselect-control-bg: #fff;
+@treeselect-control-bg: rgba(16, 24, 40, 0.05);
 @treeselect-control-box-shadow-focus: 0 0 0 3px fade(@treeselect-control-border-color-focus, 10%);
 @treeselect-control-bg-disabled: #f9f9f9;
 
-@treeselect-placeholder-font-color: @md-grey-400;
+@treeselect-placeholder-font-color: rgba(16, 24, 40, 0.75);
 @treeselect-single-value-font-color: #333;
 @treeselect-single-value-font-color-focused: @treeselect-placeholder-font-color;
 @treeselect-multi-value-margin-x: 0;
@@ -41,8 +41,8 @@
 @treeselect-multi-value-padding-x: @treeselect-padding;
 @treeselect-multi-value-padding-y: 0;
 @treeselect-multi-value-font-size: @treeselect-font-size-sm;
-@treeselect-multi-value-font-color: @md-light-blue-600;
-@treeselect-multi-value-item-bg: @md-blue-50;
+@treeselect-multi-value-font-color: #101828;
+@treeselect-multi-value-item-bg: #fff;
 @treeselect-multi-value-item-bg-new: @md-green-50;
 @treeselect-multi-value-item-border-width: 1px;
 @treeselect-multi-value-item-border-color: transparent;
@@ -354,12 +354,14 @@
   .row();
 
   height: @treeselect-control-height;
-  border: @treeselect-control-border-width solid @treeselect-control-border-color;
+  // border: @treeselect-control-border-width solid @treeselect-control-border-color;
   border-radius: @treeselect-control-border-radius;
   background: @treeselect-control-bg;
   transition-duration: @treeselect-transition-duration;
   transition-property: border-color, box-shadow, width, height, background-color, opacity;
   transition-timing-function: @ease-out-cubic;
+  padding-left: 12px;
+  padding-right: 12px;
 
   .vue3-treeselect:not(.vue3-treeselect--disabled):not(.vue3-treeselect--focused) &:hover {
     border-color: @treeselect-control-border-color-hover;
@@ -367,7 +369,7 @@
 
   .vue3-treeselect--focused:not(.vue3-treeselect--open) & {
     border-color: @treeselect-control-border-color-focus;
-    box-shadow: @treeselect-control-box-shadow-focus;
+    //box-shadow: @treeselect-control-box-shadow-focus;
   }
 
   .vue3-treeselect--disabled & {
@@ -745,8 +747,9 @@
   overflow-y: auto;
   // IE9 does not properly handle `width: 100%` with scrollbar when `box-sizing: border-box`
   width: auto;
-  border: 1px solid @treeselect-control-border-color-active;
-  background: @treeselect-menu-bg;
+  //border: 1px solid @treeselect-control-border-color-active;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(16, 24, 40, 0.25);
   line-height: @treeselect-menu-line-height;
   // https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
   -webkit-overflow-scrolling: touch;
@@ -757,7 +760,7 @@
     top: 0;
     margin-top: (-@treeselect-control-border-width);
     border-top-color: @treeselect-control-menu-divider-color;
-    box-shadow: @treeselect-menu-box-shadow;
+    //box-shadow: @treeselect-menu-box-shadow;
   }
 
   .vue3-treeselect--open-above & {
