@@ -7,6 +7,9 @@
   "unpkg": "dist/vue3-treeselect.umd.min.js",
   "css": "dist/vue3-treeselect.min.css",
   "style": "dist/vue3-treeselect.min.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/vue3-treeselect.esm.min.js",
