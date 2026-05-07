@@ -665,7 +665,15 @@ export default {
     zIndex: {
       type: [Number, String],
       default: 999
-    }
+    },
+
+    /**
+     * Prevent single child from being selected?
+     */
+    allowSingleChild: {
+      type: Boolean,
+      default: false
+    },
   },
 
   data() {
@@ -2148,7 +2156,8 @@ export default {
         let curr = node;
         while ((curr = curr.parentNode) !== NO_PARENT_NODE) {
           if (curr.children.every(this.isSelected)) {
-            this.addValue(curr);
+            if (this.allowSingleChild) { break }
+            else { this.addValue(curr) }
           } else {
             break;
           }

@@ -1,6 +1,6 @@
 {
-  "name": "@zanmato/vue3-treeselect",
-  "version": "0.4.4",
+  "name": "@nuykon/vue3-treeselect",
+  "version": "0.4.5",
   "description": "Tree select hierarchical component for Vue 3",
   "main": "dist/vue3-treeselect.cjs.min.js",
   "module": "dist/vue3-treeselect.esm.min.js",
@@ -14,7 +14,7 @@
     },
     "./dist/*": "./dist/*"
   },
-  "author": "zanmato",
+  "author": "nuykon",
   "scripts": {
     "prepare": "npm run build-library",
     "build-library": "webpack build --config webpack.lib.config.js --mode production",
