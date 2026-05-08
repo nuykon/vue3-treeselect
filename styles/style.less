@@ -37,7 +37,7 @@
 @treeselect-single-value-font-color: #333;
 @treeselect-single-value-font-color-focused: @treeselect-placeholder-font-color;
 @treeselect-multi-value-margin-x: 0;
-@treeselect-multi-value-margin-y: 2px;
+@treeselect-multi-value-margin-y: 0;
 @treeselect-multi-value-padding-x: @treeselect-padding;
 @treeselect-multi-value-padding-y: 0;
 @treeselect-multi-value-font-size: @treeselect-font-size-sm;
@@ -56,7 +56,7 @@
 @treeselect-multi-value-item-border-color-control-disabled: #e5e5e5;
 @treeselect-multi-value-remove-color: rgba(16, 24, 40, 0.5);
 @treeselect-multi-value-remove-color-hover: rgba(16, 24, 40);
-@treeselect-multi-value-remove-size: 18px;
+@treeselect-multi-value-remove-size: 12px;
 @treeselect-multi-value-divider-color: #fff;
 @treeselect-limit-tip-font-color: @md-grey-400;
 @treeselect-limit-tip-font-size: @treeselect-multi-value-font-size;
@@ -944,23 +944,17 @@
 .vue3-treeselect__check-mark {
   width: image-width(@treeselect-checkbox-checked-icon);
   height: image-height(@treeselect-checkbox-checked-icon);
-  // Set initial height to 1px.
-  transform: scaleY(1 / unit(image-height(@treeselect-checkbox-checked-icon)));
 
   .vue3-treeselect__checkbox--checked > & {
     opacity: 1;
     transform: scaleY(1);
   }
-
-  .vue3-treeselect__checkbox--disabled & {
-    .retina(@treeselect-checkbox-disabled-checked-icon, 3);
-  }
 }
 .vue3-treeselect__check-mark:after {
   content: "";
   display: block;
-  width: 4px;
-  height: 8px;
+  width: 6px;
+  height: 10px;
   position: absolute;
   top: 1px;
   left: 4px;
