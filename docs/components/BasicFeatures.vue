@@ -1,6 +1,7 @@
 <template>
   <div>
     <treeselect
+      always-open
       v-model="value"
       :multiple="true"
       :options="options"
