@@ -4,7 +4,8 @@
 
 @import "~material-colors/dist/colors.less";
 @import "~easings-css/index.less";
-
+@primary-color: var(--esmp-ui-primary-color);
+@primary-color-hover: var(--esmp-ui-primary-color-hover);
 /**
  * Variables
  */
@@ -27,10 +28,8 @@
 @treeselect-control-border-color: #ddd;
 @treeselect-control-border-color-hover: #cfcfcf;
 @treeselect-control-border-color-active: @treeselect-control-border-color-hover;
-@treeselect-control-border-color-focus: @md-light-blue-600;
 @treeselect-control-border-radius: @treeselect-border-radius-lg;
 @treeselect-control-bg: rgba(16, 24, 40, 0.05);
-@treeselect-control-box-shadow-focus: 0 0 0 3px fade(@treeselect-control-border-color-focus, 10%);
 @treeselect-control-bg-disabled: #f9f9f9;
 
 @treeselect-placeholder-font-color: rgba(16, 24, 40, 0.75);
@@ -85,7 +84,7 @@
 @treeselect-checkbox-size: 20px;
 @treeselect-checkbox-border-radius: @treeselect-border-radius-sm;
 @treeselect-checkbox-color: @md-grey-300;
-@treeselect-checkbox-color-highlight: #9466ff;
+@treeselect-checkbox-color-highlight: @primary-color;
 @treeselect-checkbox-border-color: @treeselect-checkbox-color;
 @treeselect-checkbox-bg: #fff;
 @treeselect-checkbox-border-color-hover: @treeselect-checkbox-color-highlight;
@@ -93,12 +92,12 @@
 @treeselect-checkbox-indeterminate-border-color: @treeselect-checkbox-color-highlight;
 @treeselect-checkbox-indeterminate-bg: #fff;
 @treeselect-checkbox-indeterminate-icon: "./assets/checkbox-indeterminate.png";
-@treeselect-checkbox-indeterminate-border-color-hover: #9466ff;
+@treeselect-checkbox-indeterminate-border-color-hover: @primary-color;
 @treeselect-checkbox-indeterminate-bg-hover: #fff;
-@treeselect-checkbox-checked-border-color: #9466ff;
+@treeselect-checkbox-checked-border-color: @primary-color;
 @treeselect-checkbox-checked-bg: #fff;
 @treeselect-checkbox-checked-icon: "./assets/checkbox-checked.png";
-@treeselect-checkbox-checked-border-color-hover: #9466ff;
+@treeselect-checkbox-checked-border-color-hover: @primary-color;
 @treeselect-checkbox-checked-bg-hover: #fff;
 @treeselect-checkbox-disabled-border-color: @treeselect-checkbox-border-color;
 @treeselect-checkbox-disabled-bg-color: darken(@treeselect-checkbox-bg, 3%);
@@ -365,11 +364,6 @@
 
   .vue3-treeselect:not(.vue3-treeselect--disabled):not(.vue3-treeselect--focused) &:hover {
     border-color: @treeselect-control-border-color-hover;
-  }
-
-  .vue3-treeselect--focused:not(.vue3-treeselect--open) & {
-    border-color: @treeselect-control-border-color-focus;
-    //box-shadow: @treeselect-control-box-shadow-focus;
   }
 
   .vue3-treeselect--disabled & {
